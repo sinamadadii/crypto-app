@@ -2,7 +2,17 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <div className='app'>
+
+      </div>
+      <div className='main'>
+
+      </div>
+      <div className='footer'>
+
+      </div>
+    </div>
   )
 }
 
