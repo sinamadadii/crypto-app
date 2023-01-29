@@ -1,11 +1,14 @@
 import React from 'react'
-import { Button, Menu, Typography, Avatar } from 'antd';
+import { Button, Menu, Typography, Avatar, Layout } from 'antd';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, UserOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import icon from '../cryptocurrency.png';
+import Sider from 'antd/es/layout/Sider';
 const Navbar = () => {
     return (
-        <div className='nav-container'>
+        <div breakpoint="lg"
+            collapsedWidth="0"
+            className='nav-container' >
             <div className='logo-container'>
                 <Avatar src={icon} size='large' />
                 <Typography.Title level={2} className='logo'>
@@ -13,7 +16,7 @@ const Navbar = () => {
                 </Typography.Title>
                 {/* <Button className='menu-control-container'></Button> */}
             </div>
-            <Menu theme='dark'>
+            <Menu className='side-menu' theme='dark'>
                 <Menu.Item icon={<HomeOutlined />}>
                     <Link to='/home' >Home</Link>
                 </Menu.Item>
