@@ -23,10 +23,10 @@ const App = () => {
               <div className='routes'>
                 <Routes>
                   <Route exact path='/' element={<HomePage />}></Route>
-                  <Route path='/excahnges' element={<Excahnges />}></Route>
-                  <Route path='/cryptocurrensies' element={<CryptoCurrensies />}></Route>
-                  <Route path='/crypto/:coinID' element={<CryptoDetailes />}></Route>
-                  <Route path='/news' element={<News />}></Route>
+                  <Route exact path='/excahnges' element={<Excahnges />}></Route>
+                  <Route exact path='/cryptocurrencies' element={<CryptoCurrensies />}></Route>
+                  <Route exact path='/crypto/:coinID' element={<CryptoDetailes />}></Route>
+                  <Route exact path='/news' element={<News />}></Route>
                 </Routes>
               </div>
             </Layout>
@@ -38,9 +38,9 @@ const App = () => {
               All rights reserved
             </Typography.Title>
             <Space>
-              <Link to=''>Home</Link>
-              <Link to=''>Home</Link>
-              <Link to=''>Home</Link>
+              <Link to='/'>Home</Link>
+              <Link to='/cryptocurrencies'>CryptoCurrensies</Link>
+              <Link to='/news'>News</Link>
             </Space>
           </div>
         </Layout>

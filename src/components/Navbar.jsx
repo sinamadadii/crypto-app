@@ -6,31 +6,38 @@ import icon from '../cryptocurrency.png';
 import Sider from 'antd/es/layout/Sider';
 const Navbar = () => {
     return (
-        <div breakpoint="lg"
+        <Sider
+            breakpoint="lg"
             collapsedWidth="0"
-            className='nav-container' >
+            onBreakpoint={(broken) => {
+                console.log(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+                console.log(collapsed, type);
+            }}
+        >
             <div className='logo-container'>
                 <Avatar src={icon} size='large' />
-                <Typography.Title level={2} className='logo'>
-                    <Link to='/'>Crypto Land</Link>
-                </Typography.Title>
                 {/* <Button className='menu-control-container'></Button> */}
             </div>
+            <Typography.Title level={4} className='logo'>
+                <Link to='/'>Cryptovers</Link>
+            </Typography.Title>
             <Menu className='side-menu' theme='dark'>
                 <Menu.Item icon={<HomeOutlined />}>
-                    <Link to='/home' >Home</Link>
+                    <Link to='/' >Home</Link>
                 </Menu.Item>
                 <Menu.Item icon={<FundOutlined />}>
                     <Link to='/cryptocurrencies' >Cryptocurrencies</Link>
                 </Menu.Item>
                 <Menu.Item icon={<MoneyCollectOutlined />}>
-                    <Link to='/exchanges' >Exchanges</Link>
+                    <Link to='/excahnges' >Exchanges</Link>
                 </Menu.Item>
                 <Menu.Item icon={<BulbOutlined />}>
                     <Link to='/news' >News</Link>
                 </Menu.Item>
             </Menu>
-        </div>
+        </Sider>
     )
 }
 
