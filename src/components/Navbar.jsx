@@ -16,8 +16,8 @@ const Navbar = () => {
                 console.log(collapsed, type);
             }}
         >
-            <div className='logo-container'>
-                <Avatar src={icon} size='large' />
+            <div className='logo-container' style={{ textAlign: 'center' }}>
+                <Avatar src={icon} size='large' style={{ textAlign: 'center' }} />
                 {/* <Button className='menu-control-container'></Button> */}
             </div>
             <Typography.Title level={4} className='logo'>
@@ -37,7 +37,7 @@ const Navbar = () => {
                     <Link to='/news' >News</Link>
                 </Menu.Item>
             </Menu>
-        </Sider>
+        </Sider >
     )
 }
 
