@@ -32,12 +32,12 @@ const HomePage = () => {
             })} */}
             <Typography.Title level={2} className='heading' >Global Crypto Stats</Typography.Title>
             <Row>
-                <Col span={12} > <Statistic title='Total Cryptocurrencies' value={millify(stats.total)} /> </Col>
-                <Col span={12} > <Statistic title='Total Coins' value={millify(stats.totalCoins)} /> </Col>
-                <Col span={12} > <Statistic title='Total Exchanges' value={millify(stats.totalExchanges)} /> </Col>
-                <Col span={12} > <Statistic title='Total Market Cap' value={millify(stats.totalMarketCap)} /> </Col>
-                <Col span={12} > <Statistic title='Total 24h Volume' value={millify(stats.total24hVolume)} /> </Col>
-                <Col span={12} > <Statistic title='Total Markets' value={millify(stats.totalMarkets)} /> </Col>
+                <Col span={12} > <Statistic title='Total Cryptocurrencies' value={millify(stats?.total)} /> </Col>
+                <Col span={12} > <Statistic title='Total Coins' value={millify(stats?.totalCoins)} /> </Col>
+                <Col span={12} > <Statistic title='Total Exchanges' value={millify(stats?.totalExchanges)} /> </Col>
+                <Col span={12} > <Statistic title='Total Market Cap' value={millify(stats?.totalMarketCap)} /> </Col>
+                <Col span={12} > <Statistic title='Total 24h Volume' value={millify(stats?.total24hVolume)} /> </Col>
+                <Col span={12} > <Statistic title='Total Markets' value={millify(stats?.totalMarkets)} /> </Col>
             </Row>
             <div className='home-heading-container'>
                 <Typography.Title level={2} className='home-title' >Top 10 CryptoCurrensies in the world</Typography.Title>
@@ -46,7 +46,7 @@ const HomePage = () => {
             <CryptoCurrensies simplified />
             <div className='home-heading-container'>
                 <Typography.Title level={2} className='home-title' >Latest Crypto News</Typography.Title>
-                <Typography.Title level={3} className='show-more'><Link to='/cryptocurrencies'>show more</Link></Typography.Title>
+                <Typography.Title level={3} className='show-more'><Link to='/news'>show more</Link></Typography.Title>
             </div>
             <News simplified />
         </>
