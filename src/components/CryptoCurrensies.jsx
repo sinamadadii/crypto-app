@@ -35,7 +35,7 @@ const CryptoCurrensies = () => {
                 />
             </div> */}
             <Row gutter={[32, 32]} className="crypto-card-container">
-                {coins?.map((currency) => (
+                {coins?.slice(0, 10).map((currency) => (
                     <Col
                         xs={24}
                         sm={12}
