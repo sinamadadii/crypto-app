@@ -38,11 +38,11 @@ const News = () => {
                         <a href={news.url} target="_blank" rel="noreferrer">
                             <div className="news-image-container">
                                 <Typography.Title className="news-title" level={4}>{news.title}</Typography.Title>
-                                <img style={{ maxWidth: 100, maxHeight: 100 }} src={news?.thumbnail} alt="" />
+                                <img style={{ maxWidth: 100, maxHeight: 80, borderRadius: 10 }} src={news?.thumbnail} alt="" />
                             </div>
                             <p>{news.description.length > 100 ? `${news.description.substring(0, 100)}...` : news.description}</p>
                             <div className="provider-container">
-                                <Typography.Text>{moment(news.createdAt).startOf('ss').fromNow()}</Typography.Text>
+                                <Typography.Text>{moment(news.createdAt).startOf().fromNow()}</Typography.Text>
                             </div>
                         </a>
                     </Card>
