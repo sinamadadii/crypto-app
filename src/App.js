@@ -10,7 +10,7 @@ import CryptoDetailes from './components/CryptoDetailes';
 import News from './components/News';
 
 
-const App = (props) => {
+const App = () => {
   return (
     <div>
       <Layout>

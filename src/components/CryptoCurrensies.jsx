@@ -4,7 +4,7 @@ import ColumnGroup from 'antd/es/table/ColumnGroup'
 import Link from 'antd/es/typography/Link'
 import millify from 'millify'
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useGetCryptosQuery } from '../services/cryptoApi'
 
 const CryptoCurrensies = () => {
@@ -62,7 +62,7 @@ const CryptoCurrensies = () => {
                         >
 
                             {/* Note: Change currency.id to currency.uuid  */}
-                            <Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
+                            <NavLink key={currency.uuid} to={`/crypto/${currency.uuid}`}>
                                 <Card
                                     title={`${currency.rank}. ${currency.name}`}
                                     extra={<img className="crypto-image" src={currency.iconUrl} />}
@@ -72,7 +72,7 @@ const CryptoCurrensies = () => {
                                     <p>Market Cap: {millify(currency.marketCap)}</p>
                                     <p>Daily Change: {currency.change}%</p>
                                 </Card>
-                            </Link>
+                            </NavLink>
                         </Col>
                     ))}
                 </Row>
@@ -87,7 +87,7 @@ const CryptoCurrensies = () => {
                             key={currency.uuid}
                         >
 
-                            <Link Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
+                            <NavLink Link key={currency.uuid} to={`/crypto/${currency.uuid}`}>
                                 <Card
                                     title={`${currency.rank}. ${currency.name}`}
                                     extra={<img className="crypto-image" src={currency.iconUrl} />}
@@ -97,7 +97,7 @@ const CryptoCurrensies = () => {
                                     <p>Market Cap: {millify(currency.marketCap)}</p>
                                     <p>Daily Change: {currency.change}%</p>
                                 </Card>
-                            </Link>
+                            </NavLink>
                         </Col >
                     ))}
                 </Row >
