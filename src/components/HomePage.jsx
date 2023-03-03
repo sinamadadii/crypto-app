@@ -4,6 +4,7 @@ import { Typography, Row, Col, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
 import CryptoCurrensies from './CryptoCurrensies';
 import News from './News';
+import { useGetCryptosQuery } from '../services/cryptoApi';
 const HomePage = () => {
 
     const url = 'https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0';
@@ -24,6 +25,9 @@ const HomePage = () => {
             })
             .catch(err => console.error('error:' + err));
     }, [])
+    // const { data, isFetching } = useGetCryptosQuery();
+    // const globalStats = data?.data?.stats;
+    // if (isFetching) return 'Loading...'
 
     return (
         <>
